@@ -21,6 +21,8 @@ class RewardedAdController: NSObject, GADFullScreenContentDelegate {
     private func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
         self.result = result
         let params = call.arguments as? [String: Any]
+        
+        print("????????????????????????????? " + call.method)
 
         switch call.method {
         case "loadAd":
