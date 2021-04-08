@@ -215,7 +215,13 @@ class RewardedAd extends LoadShowAd<RewardedAdEvent> {
   /// Handle the messages the channel sends
   Future<void> _handleMessages(MethodCall call) async {
     if (isDisposed) return;
+    
+
+    
     switch (call.method) {
+      case 'onEvent':
+        print(call.arguments.toString());
+        break;
       case 'loading':
         onEventController.add({RewardedAdEvent.loading: null});
         break;
