@@ -22,7 +22,9 @@ class RewardedAdController: NSObject, GADFullScreenContentDelegate {
         self.result = result
         let params = call.arguments as? [String: Any]
         
-        print("????????????????????????????? " + call.method)
+        self.channel.invokeMethod("onEvent", arguments: [
+                    "eventMethod": call.method
+                ])
 
         switch call.method {
         case "loadAd":
