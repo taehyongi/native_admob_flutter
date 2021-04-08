@@ -220,7 +220,7 @@ class RewardedAd extends LoadShowAd<RewardedAdEvent> {
     
     switch (call.method) {
       case 'onEvent':
-        print(call.arguments.toString());
+        print('??????????? ' + call.arguments.toString());
         break;
       case 'loading':
         onEventController.add({RewardedAdEvent.loading: null});
